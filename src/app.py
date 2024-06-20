@@ -7,7 +7,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 # Caminho para o diretório de pages
 template_dir = os.path.join(current_dir, 'pages')
 
-app = Flask(__name__, template_folder=template_dir)
+app = Flask(__name__, static_folder='assets', template_folder=template_dir)
 
 @app.route('/')
 def home():

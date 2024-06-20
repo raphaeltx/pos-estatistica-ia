@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(44, 44, 44);
+
+    #page {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: aliceblue;
+
+        #buildingImage {
+            width: 600px;
+        }
+    }
+}
