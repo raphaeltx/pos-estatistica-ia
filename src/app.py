@@ -1,11 +1,15 @@
 from flask import Flask, render_template
 import os
 
-# Caminho para o diretório de templates
-template_dir = os.path.abspath('pages')
+# Obter o diretório atual do arquivo app.py
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Caminho para o diretório de pages
+template_dir = os.path.join(current_dir, 'pages')
+
 app = Flask(__name__, template_folder=template_dir)
 
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('index.html')
 
